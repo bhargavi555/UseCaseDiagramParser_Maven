@@ -1,0 +1,51 @@
+{
+	"use_cases:": [{
+		"id": 1,
+		"name": "Enroll Student"
+	}, {
+		"id": 2,
+		"name": "Enroll in Seminar"
+	}, {
+		"id": 3,
+		"name": "Enroll International Student"
+	}, {
+		"id": 4,
+		"name": "Enroll Family Member"
+	}],
+
+	"actors": [{
+		"id": 5,
+		"name": "Student"
+	}, {
+		"id": 6,
+		"name": "International Student"
+	}],
+
+	"relationships": {
+		"generalizations": {
+			"use_case_generalizations": [{
+				"parent_use_case_id": 1,
+				"child_use_case_id": 4
+			}],
+			"actor_generalizations": [{
+				"parent_actor_id": 5,
+				"child_actor_id": 6
+			}]
+		},
+		"associations": [{
+			"actor_id": 5,
+			"use_case_id": 1
+		}, {
+			"actor_id": 6,
+			"use_case_id": 3
+		}],
+		"includes": [{
+			"base_use_case_id": 1,
+			"included_use_case_id": 2
+		}],
+		"extensions": [{
+			"base_use_case_id": 1,
+			"extended_use_case_id": 3
+		}]
+	}
+}
